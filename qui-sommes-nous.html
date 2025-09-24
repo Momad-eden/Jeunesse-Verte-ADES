@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeunes de l’ADES</title>
+    <link href="src/css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <!-- Header moderne -->
+    <header class="fixed top-0 left-0 w-full h-16 bg-white/80 backdrop-blur-md shadow-md z-50 transition">
+        <div class="container mx-auto flex items-center justify-between px-6 py-4">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2 text-green-700 font-bold text-lg md:text-xl">
+                <img src="src/images/logo_Jeunesse-Vert.jpeg" alt="Logo ADES Jeunes"
+                    class="h-10 w-auto sm:h-12 md:h-14 object-contain">
+                <span class="hidden sm:inline">Jeunesse-Verte ADES</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6 font-medium text-green-700">
+                <a href="index.html"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Accueil</a>
+                <a href="index.html#activites"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Activités</a>
+                <a href="index.html#actus"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Actualités</a>
+                <a href="index.html#evenements"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Événements</a>
+                <a href="index.html#contact"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+            </nav>
+
+            <!-- Menu Burger (Mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-700" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <!-- Menu Mobile -->
+        <div id="menu-mobile" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg">
+            <nav class="flex flex-col space-y-4 px-6 py-6 text-green-700 font-medium">
+                <a href="index.html"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Accueil
+                </a>
+                <a href="index.html#activites"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Activités
+                </a>
+                <a href="index.html#actus"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Actualités
+                </a>
+                <a href="index.html#evenements"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Événements
+                </a>
+                <a href="index.html#contact"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Contact
+                </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- Décalage pour ne pas que le contenu passe sous le header -->
+    <div class="pt-20"></div>
+
+    <!-- Hero Section -->
+    <!-- pousse le contenu sous le header -->
+    <main class="pt-16">
+        <section class="relative bg-green-800 text-white text-center py-8">
+            <div class="relative z-10 max-w-3xl mx-auto px-4">
+                <h1 class="text-5xl font-bold">Qui sommes-nous ?</h1>
+                <p class="mt-4 text-lg">Découvrez l’histoire, la mission et les valeurs de l’ADES Jeunes 🌱</p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Mission, Vision, Valeurs -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-auto grid md:grid-cols-3 gap-10 text-center">
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+                <h2 class="text-2xl font-bold text-green-700">🌍 Mission</h2>
+                <p class="mt-4 text-gray-600">
+                    Sensibiliser et mobiliser la jeunesse autour des enjeux du développement durable et citoyen.
+                </p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+                <h2 class="text-2xl font-bold text-green-700">👀 Vision</h2>
+                <p class="mt-4 text-gray-600">
+                    Construire un Sénégal équitable, durable et inspirant porté par une jeunesse engagée.
+                </p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition">
+                <h2 class="text-2xl font-bold text-green-700">💡 Valeurs</h2>
+                <p class="mt-4 text-gray-600">
+                    Équité, transparence et engagement citoyen guident toutes nos actions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mot du Président -->
+    <section class="py-20 bg-white">
+        <div class="max-w-2xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-green-700 text-center">Mot du Président</h2>
+
+            <!-- Image centrée -->
+            <img src="src/images/presi.jpeg" alt="Président ADES" class="w-40 h-40 rounded-full shadow-lg mx-auto mt-6">
+
+            <!-- Texte justifié -->
+            <p class="mt-6 text-gray-700 leading-relaxed text-justify">
+                Aksil ak Jaam !!!<br><br>
+                C’est pour moi un grand honneur de vous adresser les salutations cordiales et les vifs remerciements de
+                la Grande Famille du Parti de l’Alliance des Ecologistes du Sénégal (ADES).<br><br>
+                L’ADES est un parti écologique de masse ouvert à toutes les catégories de couches sociales, sans
+                distinction de race, de religion, d’origine, de sexe ou de profession. C’est un Parti politique légal de
+                droit
+                sénégalais à vocation idéologique écologique. Ses principes se reposent sur les piliers du Développement
+                durable, de la transition écologique et de la Culture que nous mettons en avant pour nous
+                inspirer.<br><br>
+                Le but de l’ADES est la conquête du pouvoir politique par les voies démocratiques afin de promouvoir le
+                développement harmonieux du Sénégal aux plans économique, social, environnemental et culturel.<br><br>
+                Mesdames, Messieurs,<br><br>
+                L’un des enjeux majeurs pour notre pays est de construire un Sénégal habitable et vivable pour nous
+                tous, mais aussi entre nous et la nature qui ne supporte pas l’excès. Quand on voit la détresse des
+                populations, les problèmes environnementaux, les catastrophes et les crises imputables au climat, on
+                sent
+                nettement qu’il y’a beaucoup de choses qui vont dans la mauvaise direction.<br><br>
+                L’enjeu environnemental n’est pas simplement un enjeu comme tant d’autres, c’est un enjeu matriciel qui
+                recouvre les autres enjeux.<br><br>
+                Notre ingéniosité nous a permis de façonner notre pays à notre image, nous allons l’utiliser, ensemble
+                pour assurer un avenir plus durable.<br><br>
+                Au Sein de la Grande famille de l’Alliance des Ecologistes du Sénégal, nous envisageons de travailler,
+                avec de nouveaux visages et avec de nouveaux usages pour être en adéquation avec les exigences de
+                l’heure
+                et relever les défis communs.<br><br>
+                Nous allons travailler, ensemble pour construire un développement et une prospérité intelligente au
+                Sénégal, intégrant la planification écologique dans un contexte international marqué par l’effondrement
+                du
+                droit international et du multilatéralisme qui repose sur la souveraineté des États, mais ce qui peut
+                mener
+                à des déséquilibres lorsque des puissances dominantes cherchent à imposer leur volonté. Aujourd’hui, sur
+                la
+                scène internationale, il y’a comme une dictature du sens globalisé, de grandes puissances qui ont réussi
+                à
+                bâtir, une puissance économique, puis acquièrent une puissance financière, ensuite bâtir une puissance
+                militaire pour protéger leurs intérêts et leur allier et peser de tout leur poids sur la scène
+                internationale
+                du point de vue diplomatique. Dès lors, nous sommes forcément obligés de poser la question des liens et
+                des
+                relations que le multilatéralisme produit et son impact sur notre montée en humanité d’où l’importance
+                de le
+                repenser pour faire un ordre en symbiose avec la dynamique des sociétés et des groupes sociaux.<br><br>
+                Mesdames, messieurs,<br><br>
+                L’Alliance des Ecologistes du Sénégal, c’est avant tout un Programme Social pour la Planification
+                Ecologique et la Résilience Economique.
+            </p>
+            <!-- Signature -->
+            <div class="mt-6">
+                <span class="text-green-600 font-semibold">Baye Salla Mar</span><br>
+                <span class="text-gray-500 text-sm">Président de l’ADES</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-green-700 text-center text-white">
+        <h2 class="text-3xl font-bold">Rejoignez-nous dans notre engagement</h2>
+        <p class="mt-4 text-lg">Contactez-nous ou devenez membre de l’ADES Jeunes</p>
+        <a href="./index.html#contact"
+            class="mt-6 inline-block bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            Nous contacter →
+        </a>
+    </section>
+    <script>
+        // Menu Burger
+        const menuBtn = document.getElementById("menu-btn");
+        const menuMobile = document.getElementById("menu-mobile");
+
+        menuBtn.addEventListener("click", () => {
+            menuMobile.classList.toggle("hidden");
+        });
+    </script>
+</body>
+
+</html>

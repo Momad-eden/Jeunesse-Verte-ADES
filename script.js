@@ -55,7 +55,7 @@ fetch("data.json")
       autoplay: { delay: 3000 },
       breakpoints: {
         768: { slidesPerView: 2 },
-        1024: { slidesPerView: 4 },
+        1024: { slidesPerView: 3 },
       },
     });
   });
@@ -76,7 +76,7 @@ menuBtn.addEventListener("click", () => {
     const bg = document.getElementById('parallax-bg');
 
     // chemins images (change si besoin)
-    const mobileImg = 'src/images/fond-mobile.jpg';
+    const mobileImg = 'src/images/fond-desktop2.jpeg';
     const desktopImg = 'src/images/fond-desktop2.jpeg';
 
     const speed = 0.25; // <--- ajuste la vitesse (0.1 = très lent, 0.5 = plus rapide)
