@@ -68,6 +68,13 @@ menuBtn.addEventListener("click", () => {
   menuMobile.classList.toggle("hidden");
 });
 
+// Fermer le menu quand on défile
+window.addEventListener("scroll", () => {
+  if (!menuMobile.classList.contains("hidden")) {
+    menuMobile.classList.add("hidden");
+  }
+});
+
 
 // SCRIPT PARALLAX (place juste avant </body>)
 
