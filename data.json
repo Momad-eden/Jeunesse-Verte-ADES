@@ -1,0 +1,84 @@
+{
+  "activites": [
+    {
+      "image": "src/images/image_activites/nettoyage-plage.jpeg",
+      "titre": "Nettoyage des plages",
+      "desc": "Les jeunes unis pour protéger nos côtes."
+    },
+    {
+      "titre": "Sensibilisation",
+      "desc": "Nous allons dans les écoles et universités pour éduquer les jeunes sur l’écologie.",
+      "image": "src/images/image_activites/marche.jpeg"
+    },
+    {
+      "titre": "Plantation d’arbres",
+      "desc": "Des campagnes de reboisement sont organisées pour reverdir nos villes.",
+      "image": "src/images/image_activites/plantation-arbre.jpg"
+    },
+    {
+      "titre": "Ateliers de recyclage créatif",
+      "desc": "Des ateliers ont permis la fabrication de pots, sacs reutilisables et décorations à partir de matériaux recyclés.",
+      "image": "src/images/image_activites/recyclage.jpg"
+    },
+    {
+      "titre": "Journée sans plastique",
+      "desc": "Des journées sans plastique ont favorisé l'utilisation de paniers, de calebasse et sacs réutilisables.",
+      "image": "src/images/image_activites/non-plastique.jpg"
+    },
+    {
+      "titre": "Potager communautaire",
+      "desc": "Un potager collectif a été créé, fournissant des légumes bio et initiant les jeunes à l'agriculture durable.",
+      "image": "src/images/image_activites/potager-com.jpg"
+    }
+  ],
+  "actus": [
+    {
+      "id": 1,
+      "image": "src/images/image_actualites/rencontre-GFC.jpg",
+      "titre": "Rencontre avec Serigne Oumar Sy Djamil",
+      "desc": "Pr de l’ADES rencontre le Président du Mouvement de la Grande Force Citoyenne (GFC) Serigne Oumar Sy Djamil.",
+      "contenu": "C’est avec un immense plaisir que nous avons rencontré, ce dimanche 14 Septembre 2025, Serigne Cheikh Oumar Sy Djamil, Président du Mouvement Grande Force Citoyenne (GFC), de Gueule Tapee, Fass Colobane, pour échanger avec lui sur un cadre de collaboration et de partenariat associatif entre Alliance Des Ecologistes du Sénégal (ADES) et le Mouvement Grande Force Citoyenne (GFC). Un grand merci pour aux membres de GFC pour leur passion pour le développement local, et leur vision pour le développement du Sénégal, vu depuis les terroirs.."
+    },
+    {
+      "id": 2,
+      "image": "src/images/image_actualites/jeunes-europe.jpeg",
+      "titre": "Rencontre avec les jeunes écologistes de EELV",
+      "desc": "Journéé d'été des Écologistes",
+      "contenu": "Lors de la rencontre, les jeunes ont échangé des idées innovantes pour lutter contre la pollution et renforcer la solidarité écologique."
+    },
+    {
+      "id": 3,
+      "image": "src/images/image_actualites/JDE-2025.jpeg",
+      "titre": "JDE 2025",
+      "desc": "Le Président de l’ADES porte la voix de l’Afrique et appelle à la réforme de l’ONU.",
+      "contenu": "La plénière internationale des Journées d’Été des Écologistes (JDE) d’Europe Écologie les Verts (EELV) s’est tenue à Strasbourg, en France, du 21 au 23 aout 2025. Le thème de cette année tournait autour de : « Dans un monde en mutations : quelle place pour le multilatéralisme et le droit international ». Et cette année, la voix de l’Afrique y a bien raisonné. "
+    },
+    {
+      "id": 4,
+      "image": "src/images/image_actualites/JDE2025.jpeg",
+      "titre": "JDE 2025",
+      "desc": "Moments d’échanges entre..",
+      "contenu": "Moments d’échanges entre la Délégation de l’ADES et le Vice – Président du Parti Allemand Sven GIEGOLD et les membres du Parti Vert Allemand."
+    }
+  ],
+  "evenements": [
+    {
+      "date": "Decembre",
+      "titre": "Un artiste-un arbre🌳",
+      "lieu": "Tournée écologique",
+      "desc": "Chaque artiste participant plante un arbre en son nom."
+    },
+    {
+      "date": "date",
+      "titre": "Marche pour le climat",
+      "lieu": "lieu",
+      "desc": "Mobilisation citoyenne pour sensibiliser sur l’urgence climatique."
+    },
+    {
+      "date": "date",
+      "titre": "Sensibilisation",
+      "lieu": "lieu",
+      "desc": "Nous allons dans les écoles et universités pour éduquer les jeunes sur l’écologie."
+    }
+  ]
+}

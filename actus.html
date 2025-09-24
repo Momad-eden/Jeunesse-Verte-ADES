@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail Actualité</title>
+    <link href="src/css/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <!-- Header moderne -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md shadow-md z-50 transition">
+        <div class="container mx-auto flex items-center justify-between px-6 py-4">
+
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2 text-green-700 font-bold text-lg md:text-xl">
+                <img src="src/images/logo_Jeunesse-Vert.jpeg" alt="Logo ADES Jeunes"
+                    class="h-10 w-auto sm:h-12 md:h-14 object-contain">
+                <span class="hidden sm:inline">Jeunesse-Verte ADES</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex space-x-6 font-medium text-green-700">
+                <a href="index.html"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Accueil</a>
+                <a href="index.html#activites"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Activités</a>
+                <a href="index.html#actus"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Actualités</a>
+                <a href="index.html#evenements"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Événements</a>
+                <a href="index.html#contact"
+                    class="relative hover:text-green-900 after:content-[''] after:block after:w-0 after:h-[2px] after:bg-green-700 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+            </nav>
+
+            <!-- Menu Burger (Mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-700" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu Mobile -->
+        <!-- Menu Mobile -->
+        <div id="menu-mobile" class="hidden md:hidden bg-white/95 backdrop-blur-md shadow-lg">
+            <nav class="flex flex-col space-y-4 px-6 py-6 text-green-700 font-medium">
+                <a href="index.html"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Accueil
+                </a>
+                <a href="index.html#activites"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Activités
+                </a>
+                <a href="index.html#actus"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Actualités
+                </a>
+                <a href="index.html#evenements"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Événements
+                </a>
+                <a href="index.html#contact"
+                    class="relative py-3 px-4 rounded-lg hover:bg-green-100 active:bg-green-200 hover:text-green-900 active:text-green-900 transition">
+                    Contact
+                </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- Décalage pour ne pas que le contenu passe sous le header -->
+    <div class="pt-20"></div>
+
+    <div class="container mx-auto px-6 py-12" id="actu-detail">
+        <!-- Contenu dynamique -->
+    </div>
+    <!-- Footer -->
+    <footer class="bg-green-800 text-green-50 py-10 mt-16">
+        <div class="container mx-auto text-center px-6">
+            <p class="text-sm md:text-base">© 2025 ADES – Alliance des Écologistes du Sénégal</p>
+            <div class="flex justify-center mt-6 space-x-6">
+                <a href="https://www.ades.sn" target="_blank"
+                    class="hover:text-green-300 transition-colors duration-300">ADES</a>
+                <a href="https://x.com/ades_senegal?s=21" target="_blank" class="hover:text-green-300 transition-colors duration-300">Twitter</a>
+                <a href="https://web.facebook.com/p/Alliance-Des-Ecologistes-du-S%C3%A9n%C3%A9gal-100068978242811/?_rdc=1&_rdr"
+                    target="_blank" class="hover:text-green-300 transition-colors duration-300">Facebook</a>
+                <a href="https://www.instagram.com/ades_alliance_des_ecologistes?igsh=MW51Y3Z6aGxib29pZg%3D%3D&utm_source=qr" target="_blank" class="hover:text-green-300 transition-colors duration-300">Instagram</a>
+                <a href="https://youtube.com/@ades_senegal?si=16KMvH5UxgdHV_n2" target="_blank" class="hover:text-green-300 transition-colors duration-300">Youtube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get("id"));
+
+        fetch("data.json")
+            .then(res => res.json())
+            .then(data => {
+                const actu = data.actus.find(a => a.id === id);
+                if (actu) {
+                    document.getElementById("actu-detail").innerHTML = `
+            <div class="mx-auto bg-white shadow-lg rounded-lg overflow-hidden max-w-2xl w-full px-4">
+                <img src="${actu.image}" class="w-full h-80 object-cover">
+                <div class="p-6">
+                    <h1 class="text-3xl font-bold mb-4 text-green-900">${actu.titre}</h1>
+                    <p class="text-green-600 font-bold mb-4">${actu.desc}</p>
+                    <div class="text-gray-400 leading-relaxed">${actu.contenu}</div>
+                    <a href="index.html#actus" class="mt-6 inline-block text-green-600 hover:underline">← Retour aux actualités</a>
+                </div>
+            </div>
+
+          `;
+                } else {
+                    document.getElementById("actu-detail").innerHTML = `<p>Actualité introuvable.</p>`;
+                }
+            });
+
+        // Menu Burger
+        const menuBtn = document.getElementById("menu-btn");
+        const menuMobile = document.getElementById("menu-mobile");
+
+        menuBtn.addEventListener("click", () => {
+            menuMobile.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>
