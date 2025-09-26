@@ -130,13 +130,18 @@ window.addEventListener("scroll", () => {
 //   js contacts 
 
 // ---------- Contact form ----------
+// ---------- Contact form ----------
 (function () {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('contact-status');
   const submitBtn = document.getElementById('contact-submit');
 
   function showMessage(type, msg) {
-    status.classList.remove('hidden', 'bg-green-50', 'text-green-700', 'bg-red-50', 'text-red-700', 'border', 'border-green-100', 'border-red-100');
+    status.classList.remove(
+      'hidden', 'bg-green-50', 'text-green-700',
+      'bg-red-50', 'text-red-700',
+      'border', 'border-green-100', 'border-red-100'
+    );
     if (type === 'success') {
       status.classList.add('bg-green-50', 'text-green-700', 'border', 'border-green-100');
     } else {
@@ -163,38 +168,23 @@ window.addEventListener("scroll", () => {
     submitBtn.innerHTML = 'Envoi...';
 
     try {
-      // === OPTION 1 : Formspree (recommandé pour production) ===
-      // Remplace par ton ID Formspree (format ex: "f/abcd...") si tu veux recevoir des e-mails.
-      const FORMSPREE_ID = 'REPLACE_WITH_YOUR_FORM_ID';
+      // ID Formspree
+      const FORMSPREE_ID = "xdkwkyby";
 
-      if (FORMSPREE_ID === 'REPLACE_WITH_YOUR_FORM_ID') {
-        // Fallback localStorage (pour tests locaux sans Formspree)
-        const saved = JSON.parse(localStorage.getItem('ades_messages') || '[]');
-        saved.unshift({
-          name,
-          email,
-          sujet: form.querySelector('[name="sujet"]').value || '',
-          message,
-          date: new Date().toISOString()
-        });
-        localStorage.setItem('ades_messages', JSON.stringify(saved));
-        showMessage('success', 'Message enregistré localement. Remplacez FORMSPREE_ID pour envoyer par email.');
+      // Envoi via Formspree
+      const formData = new FormData(form);
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      const json = await res.json();
+      if (res.ok) {
+        showMessage('success', 'Merci — votre message a bien été envoyé !');
         form.reset();
       } else {
-        // Envoi via Formspree
-        const formData = new FormData(form);
-        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: formData
-        });
-        const json = await res.json();
-        if (res.ok) {
-          showMessage('success', 'Merci — votre message a bien été envoyé !');
-          form.reset();
-        } else {
-          showMessage('error', 'Erreur lors de l’envoi : ' + (json.error || 'réessayez plus tard.'));
-        }
+        showMessage('error', 'Erreur lors de l’envoi : ' + (json.error || 'réessayez plus tard.'));
       }
     } catch (err) {
       showMessage('error', 'Erreur : ' + err.message);
