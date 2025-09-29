@@ -9,6 +9,7 @@
         content="ADES Sénégal, parti politique écologique engagé pour la protection de l’environnement, le développement durable et la participation citoyenne.">
     <link href="src/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/01017a31ec.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-gray-50 text-gray-900">
@@ -226,60 +227,123 @@
     <!-- section contacts -->
 
     <!-- Contact -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="adhesion" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-5xl">
             <h2 class="text-3xl font-bold text-center mb-12 text-green-800">
-                Adhérez à l’ADES
+                Formulaire d’adhésion à l’ADES
             </h2>
 
-            <div class="flex flex-col gap-10">
+            <div class="flex flex-col gap-10 max-w-md mx-auto">
                 <!-- Formulaire Adhésion -->
-                <div class="bg-green-50 rounded-2xl shadow-sm border border-green-100 p-8">
-                    <form id="adhesion-form" class="space-y-5" novalidate>
+                <div class="bg-green-50 rounded-2xl shadow  border-green-200 p-8">
+                    <form id="adhesion-form" class="space-y-6" novalidate>
                         <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
 
+                        <!-- Nom -->
                         <div>
-                            <label for="name" class="block text-sm font-medium text-green-400">Nom complet *</label>
-                            <input id="name" name="name" required type="text"
-                                class="mt-1 w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-green-300 focus:outline-none"
+                            <label for="nom" class="block text-sm font-medium text-green-700">Nom complet *</label>
+                            <input id="nom" name="nom" required type="text" class="mt-1 w-full border border-green-200 rounded-lg p-3 text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
                                 placeholder="Ex: Aminata Diop">
                         </div>
 
+                        <!-- Date de naissance -->
                         <div>
-                            <label for="email" class="block text-sm font-medium text-green-400">Email *</label>
-                            <input id="email" name="email" required type="email"
-                                class="mt-1 w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-green-300 focus:outline-none"
+                            <label for="date_naissance" class="block text-sm font-medium text-green-700">
+                                Date de naissance *
+                            </label>
+                            <input id="date_naissance" name="date_naissance" required type="date" class="mt-1 w-full border border-green-200 rounded-lg p-3 
+                     text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
+                                placeholder="JJ/MM/AAAA">
+                        </div>
+
+                        <!-- Lieu de naissance -->
+                        <div>
+                            <label for="lieu_naissance" class="block text-sm font-medium text-green-700">Lieu de
+                                naissance *</label>
+                            <input id="lieu_naissance" name="lieu_naissance" required type="text" class="mt-1 w-full border border-green-200 rounded-lg p-3 text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
+                                placeholder="Ex: Thiès">
+                        </div>
+
+                        <!-- Profession -->
+                        <div>
+                            <label for="profession" class="block text-sm font-medium text-green-700">Profession
+                                *</label>
+                            <input id="profession" name="profession" required type="text" class="mt-1 w-full border border-green-200 rounded-lg p-3 text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
+                                placeholder="Ex: Étudiant, Enseignant...">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-green-700">Email *</label>
+                            <input id="email" name="email" required type="email" class="mt-1 w-full border border-green-200 rounded-lg p-3 text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
                                 placeholder="exemple@domaine.com">
                         </div>
 
+                        <!-- Téléphone -->
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-green-400">Téléphone *</label>
-                            <input id="phone" name="phone" required type="tel"
-                                class="mt-1 w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-green-300 focus:outline-none"
+                            <label for="telephone" class="block text-sm font-medium text-green-700">Téléphone *</label>
+                            <input id="telephone" name="telephone" required type="tel" class="mt-1 w-full border border-green-200 rounded-lg p-3 text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
                                 placeholder="+221 77 000 00 00">
                         </div>
 
+                        <!-- Adresse -->
                         <div>
-                            <label for="ville" class="block text-sm font-medium text-green-400">Ville *</label>
-                            <input id="ville" name="ville" required type="text"
-                                class="mt-1 w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-green-300 focus:outline-none"
-                                placeholder="Ex: Dakar">
+                            <label for="adresse" class="block text-sm font-medium text-green-700">Adresse (Ville,
+                                Quartier) *</label>
+                            <input id="adresse" name="adresse" required type="text" class="mt-1 w-full border border-green-200 rounded-lg p-3 text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
+                                placeholder="Ex: Dakar, Médina">
                         </div>
 
+                        <!-- Type d’adhésion -->
                         <div>
-                            <label for="motivation" class="block text-sm font-medium text-green-400">Pourquoi
-                                souhaitez-vous adhérer ? *</label>
-                            <textarea id="motivation" name="motivation" required rows="4"
-                                class="mt-1 w-full border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-green-300 focus:outline-none"
+                            <label for="type_adhesion" class="block text-sm font-medium text-green-700">Type d’adhésion
+                                *</label>
+                            <select id="type_adhesion" name="type_adhesion" required class="mt-1 w-full border border-green-200 rounded-lg p-3 
+                     text-green-800 bg-white
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none">
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="Membre actif">Membre actif</option>
+                                <option value="Sympathisant">Sympathisant</option>
+                                <option value="Jeunesse">Jeunesse</option>
+                                <option value="Femmes">Femmes</option>
+                                <option value="Diaspora">Diaspora</option>
+                            </select>
+                        </div>
+
+                        <!-- Motivation -->
+                        <div>
+                            <label for="motivation" class="block text-sm font-medium text-green-700">
+                                Pourquoi souhaitez-vous adhérer ? *
+                            </label>
+                            <textarea id="motivation" name="motivation" required rows="4" class="mt-1 w-full border border-green-200 rounded-lg p-3 
+                     text-green-800 placeholder-gray-400
+                     focus:ring-2 focus:ring-green-400 focus:border-green-400 focus:outline-none"
                                 placeholder="Votre motivation..."></textarea>
                         </div>
 
+                        <!-- Consentement -->
+                        <div class="flex items-center">
+                            <input id="consentement" name="consentement" required type="checkbox"
+                                class="h-4 w-4 text-green-600 border-green-300 rounded focus:ring-green-400">
+                            <label for="consentement" class="ml-2 text-sm text-green-700">
+                                J’accepte le traitement de mes données personnelles.
+                            </label>
+                        </div>
+
+                        <!-- Bouton -->
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                            <button type="submit"
-                                class="bg-green-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-800 transition">
+                            <button type="submit" class="bg-green-700 text-white px-6 py-3 rounded-full font-semibold 
+                     hover:bg-green-800 focus:ring-2 focus:ring-green-400 transition">
                                 Adhérer
                             </button>
-                            <p class="text-sm text-gray-500">Nous vous recontacterons rapidement</p>
+                            <p class="text-sm text-green-600">Nous vous recontacterons rapidement</p>
                         </div>
 
                         <div id="adhesion-status" class="hidden rounded-md mt-2 text-sm" role="status"
@@ -288,8 +352,10 @@
                 </div>
             </div>
         </div>
-
     </section>
+
+
+
 
     <!-- Infos "Restons en contact" -->
     <section class="max-w-5xl mx-auto">
@@ -301,25 +367,21 @@
 
             <ul class="space-y-4 text-gray-700">
                 <li class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-green-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 2C8 2 5 5 5 9c0 6.63 7 13 7 13s7-6.37 7-13c0-4-3-7-7-7z" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <span>Yoffe, Dakar — Sénégal</span>
+
+                    <span><i class="fa-solid fa-location-pin w-6 h-6 text-green-600 flex-shrink-0"></i>&nbsp;Yoffe,
+                        Dakar — Sénégal</span>
                 </li>
                 <li class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-green-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                        <path d="M21 15v4a2 2 0 0 1-2 2h-2a16 16 0 0 1-8-3 16 16 0 0 1-3-3v-2a2 2 0 0 1 2-2h4"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <a href="tel:+221339192788" class="hover:text-green-700">+221 33 919 27 88</a>
+
+                    <a href="tel:+221339192788" class="hover:text-green-700"><i
+                            class="fa-solid fa-phone  w-6 h-6 text-green-600 flex-shrink-0"></i>&nbsp;+221 33 919 27
+                        88</a>
                 </li>
                 <li class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-green-600 flex-shrink-0" viewBox="0 0 24 24" fill="none">
-                        <path d="M3 8l9 6 9-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                    <a href="mailto:ades@ades.sn" class="hover:text-green-700">ades@ades.sn</a>
+
+                    <a href="mailto:ades@ades.sn" class="hover:text-green-700">
+                        <i class="fa-solid fa-envelope w-6 h-6 text-green-600 flex-shrink-0"></i>
+                        &nbsp;ades@ades.sn</a>
                 </li>
             </ul>
         </div>
@@ -335,14 +397,14 @@
         <div class="container mx-auto text-center px-6">
             <p class="text-sm md:text-base">© 2025 ADES – Alliance des Écologistes du Sénégal</p>
             <div class="flex justify-center mt-6 space-x-6">
+                <a href="https://www.instagram.com/ades_alliance_des_ecologistes?igsh=MW51Y3Z6aGxib29pZg%3D%3D&utm_source=qr"
+                    target="_blank" class="hover:text-green-300 transition-colors duration-300">Instagram</a>
                 <a href="https://www.ades.sn" target="_blank"
                     class="hover:text-green-300 transition-colors duration-300">ADES</a>
                 <a href="https://x.com/ades_senegal?s=21" target="_blank"
                     class="hover:text-green-300 transition-colors duration-300">Twitter</a>
                 <a href="https://web.facebook.com/p/Alliance-Des-Ecologistes-du-S%C3%A9n%C3%A9gal-100068978242811/?_rdc=1&_rdr"
                     target="_blank" class="hover:text-green-300 transition-colors duration-300">Facebook</a>
-                <a href="https://www.instagram.com/ades_alliance_des_ecologistes?igsh=MW51Y3Z6aGxib29pZg%3D%3D&utm_source=qr"
-                    target="_blank" class="hover:text-green-300 transition-colors duration-300">Instagram</a>
                 <a href="https://youtube.com/@ades_senegal?si=16KMvH5UxgdHV_n2" target="_blank"
                     class="hover:text-green-300 transition-colors duration-300">Youtube</a>
             </div>

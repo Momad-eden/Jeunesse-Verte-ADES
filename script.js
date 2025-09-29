@@ -39,7 +39,7 @@ fetch("data.json")
         <div class="bg-white rounded-lg shadow-md p-6">
           <h3 class="text-xl font-bold text-green-700">${evt.titre}</h3>
           <p class="text-gray-600">${evt.desc}</p>
-          <p class="mt-2"><span class="font-semibold">📅 ${evt.date}</span> | 📍 ${evt.lieu}</p>
+          <p class="mt-2"><span class="font-semibold"> ${evt.date}</span> |  ${evt.lieu}</p>
         </div>
       `;
     });
@@ -128,64 +128,51 @@ window.addEventListener("scroll", () => {
   });
 
 //   js contacts 
-
 (function () {
   const form = document.getElementById('adhesion-form');
   const status = document.getElementById('adhesion-status');
   const submitBtn = form.querySelector('button[type="submit"]');
 
   function showMessage(type, msg) {
-    status.classList.remove('hidden', 'bg-green-50', 'text-green-700', 'bg-red-50', 'text-red-700', 'border', 'border-green-100', 'border-red-100');
+    status.className = "rounded-md mt-2 text-sm p-3";
     if (type === 'success') {
-      status.classList.add('bg-green-50', 'text-green-700', 'border', 'border-green-100');
+      status.classList.add("bg-green-50", "text-green-700", "border", "border-green-100");
     } else {
-      status.classList.add('bg-red-50', 'text-red-700', 'border', 'border-red-100');
+      status.classList.add("bg-red-50", "text-red-700", "border", "border-red-100");
     }
-    status.innerHTML = `<p class="p-3">${msg}</p>`;
-    setTimeout(() => status.classList.add('hidden'), 7000);
+    status.innerText = msg;
+    status.classList.remove("hidden");
+    setTimeout(() => status.classList.add("hidden"), 7000);
   }
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    const name = form.querySelector('[name="name"]').value.trim();
-    const email = form.querySelector('[name="email"]').value.trim();
-    const phone = form.querySelector('[name="phone"]').value.trim();
-    const ville = form.querySelector('[name="ville"]').value.trim();
-    const motivation = form.querySelector('[name="motivation"]').value.trim();
-
-    if (!name || !email || !phone || !ville || !motivation) {
-      showMessage('error', 'Veuillez remplir tous les champs obligatoires.');
-      return;
-    }
 
     submitBtn.disabled = true;
     const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = 'Envoi...';
+    submitBtn.innerHTML = "Envoi...";
 
     try {
-      const FORMSPREE_ID = "xdkwkyby"; // ton ID Formspree
-
-      const formData = new FormData(form);
+      const FORMSPREE_ID = "xdkwkyby"; 
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
       });
 
       if (res.ok) {
-        showMessage('success', 'Merci — votre adhésion a bien été enregistrée !');
+        showMessage("success", "Merci — votre adhésion a bien été envoyée !");
         form.reset();
       } else {
-        const json = await res.json();
-        showMessage('error', 'Erreur lors de l’envoi : ' + (json.error || 'réessayez plus tard.'));
+        showMessage("error", "Erreur lors de l’envoi, vérifiez votre identifiant Formspree.");
       }
     } catch (err) {
-      showMessage('error', 'Erreur : ' + err.message);
-      console.error(err);
+      showMessage("error", "Erreur : " + err.message);
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
     }
   });
 })();
+
+
